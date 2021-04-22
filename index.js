@@ -41,4 +41,5 @@ express()
     const accountDetails = accountToTotal[req.params.accountNumber] || {}
     res.send(accountDetails.audits)
   })
+  .get('/api/accounts', (req, res) => res.send(accountToTotal))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
